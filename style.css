@@ -1,0 +1,133 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Container */
+.container {
+  display: flex;
+  max-width: 1000px;
+  width: 90%;
+  background: linear-gradient(to right, #fff5f7, #fff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Content */
+.content {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+h1 span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+  display: block;
+}
+
+p {
+  font-size: 0.95rem;
+  color: hsl(0, 36%, 60%);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Email Form */
+.email-form {
+  display: flex;
+  border: 1px solid hsl(0, 36%, 70%);
+  border-radius: 25px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.email-form input {
+  border: none;
+  padding: 0.75rem 1rem;
+  flex: 1;
+  outline: none;
+  font-size: 1rem;
+  color: hsl(0, 6%, 24%);
+}
+
+.email-form input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+.email-form button {
+  background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.email-form button:hover {
+  opacity: 0.8;
+}
+
+.email-form button img {
+  width: 15px;
+}
+
+/* Right Side Hero Image */
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0 auto 2rem;
+  }
+}
